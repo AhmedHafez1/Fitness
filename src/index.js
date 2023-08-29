@@ -1,5 +1,6 @@
 const axios = require('axios');
 
+console.log('Runnnnnnnning 44444444444444444444444');
 // Get a list of workouts from the database or API.
 async function getWorkouts() {
   // Make an API call to get the list of workouts.

@@ -1,12 +1,14 @@
 {
   "scripts": {
-    "webpack": "webpack --watch"
+    "serve": "webpack serve",
+    "build": "webpack --watch"
   },
   "dependencies": {
     "axios": "^1.5.0"
   },
   "devDependencies": {
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
