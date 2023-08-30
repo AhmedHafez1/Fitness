@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "serve": "webpack serve",
-    "build": "webpack --watch"
+    "start": "webpack serve",
+    "build": "set NODE_ENV=production&&webpack"
   },
   "dependencies": {
     "axios": "^1.5.0"

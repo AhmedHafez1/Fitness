@@ -1,13 +1,22 @@
 const path = require('path');
-module.exports = {
+const productionMode = process.env.NODE_ENV === 'production';
+
+const config = {
   entry: ['./src/index.js', './src/register.js'],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   mode: 'development',
   devServer: {
     static: './dist',
   },
 };
+
+if (productionMode) {
+  config.mode = 'production';
+  config.devtool = 'inline-source-map';
+}
+
+module.exports = config;
