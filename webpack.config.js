@@ -2,15 +2,22 @@ const path = require('path');
 const productionMode = process.env.NODE_ENV === 'production';
 
 const config = {
-  entry: ['./src/index.js', './src/register.js'],
+  entry: { index: './src/index', reg: './src/register' },
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
+  module: {
+    rules: [{ test: /\.ts?$/, use: 'ts-loader', exclude: /node_modules/ }],
+  },
+  resolve: { extensions: ['.ts', '.js'] },
   devtool: 'source-map',
   mode: 'development',
   devServer: {
     static: './dist',
+  },
+  stats: {
+    errorDetails: true,
   },
 };
 
