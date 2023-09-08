@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('../css/main.css');
 
 console.log('Runnnnnnnning 44444444444444444444444');
 // Get a list of workouts from the database or API.
